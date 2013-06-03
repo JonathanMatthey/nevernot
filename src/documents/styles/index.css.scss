@@ -1,0 +1,84 @@
+/* ==========================================================================
+   INDEX PAGES
+   ========================================================================== */
+
+@import url('http://fast.fonts.com/t/1.css?apiType=css&projectid=38f115a8-fd90-46fb-9145-aec120db959b');
+@font-face{font-family:'TradeGothicW01-BoldCn20 675334';src:url('http://store.nike.com/nikestore/html/css/fonts/257c802f-349c-4b4d-aefa-546d5de15ec6.eot');src:url('http://store.nike.com/nikestore/html/css/fonts/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix') format('embedded-opentype'),url('http://store.nike.com/nikestore/html/css/fonts/5fdc935e-9e30-442a-bbe9-8d887b858471.woff') format('woff'),url('http://store.nike.com/nikestore/html/css/fonts/616c4c87-a077-43f4-a9f4-f01267c13818.ttf') format('truetype'),url('http://store.nike.com/nikestore/html/css/fonts/c901ad5f-a842-4549-a1f4-583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169') format('svg')}
+
+body{
+  font-family:'TradeGothicW01-BoldCn20 675334', helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top:30px;
+  background-color:#111;
+}
+
+h1{
+  font-weight:normal;
+  color:#333  ;
+  margin-bottom:30px;
+  margin-top:0;
+  padding-top:0;
+  font-size:60px;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+ol{
+  width: 300px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 30px;
+  color:#333;
+  padding-bottom:10px;
+}
+
+a{
+  text-decoration: none;
+  color:#666;
+  transition: all 100ms linear ;
+  -moz-transition:all 100ms linear ;
+  -webkit-transition:all 100ms linear ;
+  -o-transition:all 100ms linear ;
+}
+
+a:hover{
+  color:#fa5400;
+}
+
+h2{
+  color:#333;
+  font-weight:normal;
+  font-size:30px;
+}
+
+ul > li > table{
+  margin: 0 auto;
+}
+ul > li > table  td{
+  width:50px; height:50px;
+  border: 1px solid #f6f6f6;
+  background-color:#f6f6f6;
+  transition: all 100ms linear ;
+  -moz-transition:all 100ms linear ;
+  -webkit-transition:all 100ms linear ;
+  -o-transition:all 100ms linear ;
+}
+ul > li > table  td a{
+  width:50px;
+  height:50px;
+  display: block;
+  line-height: 50px;
+}
+
+ul > li > table  td:hover{
+  background-color:#fa5400;
+  color:white;
+}
+
+ul > li > table  td:hover a{
+  color:white;
+}

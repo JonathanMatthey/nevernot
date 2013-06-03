@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Global Styles bitches!
+   ========================================================================== */
+#navbarjpg{
+  height:65px;
+  width:1440px;
+  background-image:url(../img/nav.jpg);
+  position: fixed;
+  z-index: 55;
+  background-size:100%;
+}
+
+#cover_trailer_fixed{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index: 5;
+}
+
+.video_trans_cover{
+  height:900px;
+  width:100%;
+  background-color: transparent;
+  position: relative;
+  z-index: 11;
+}
+
+.article{
+  padding:0;
+
+  position: relative;
+  z-index: 11;
+  background-color:#eee;
+  p{
+    font-size:20px;
+    text-align: left;
+  }
+}
+
+.vid-title1{
+  background-image:url(../img/nn-vid-title.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:-5px;
+  left:0;
+  z-index: 999;
+}
+
+.fluid-width-video-wrapper{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+article img{
+  width:1440px;
+  position: relative;
+  display: block;
+  float:left;
+}

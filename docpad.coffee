@@ -37,14 +37,14 @@ docpadConfig = {
 			styles: [
 				'/vendor/normalize.css'
 				'/vendor/h5bp.css'
-				'/styles/style.css'
 			]
 
 			# The website's scripts
 			scripts: [
-				'/vendor/log.js'
-				'/vendor/modernizr.js'
-				'/scripts/script.js'
+				'vendor/log.js'
+				'vendor/modernizr.js'
+				'vendor/jquery.fitvids.js'
+				'vendor/jquery.stellar.js'
 			]
 
 
@@ -61,6 +61,10 @@ docpadConfig = {
 			# if our document does not have it's own title, then we should just use the site's title
 			else
 				@site.title
+
+		# view specific id
+		getViewId: ->
+			@document.viewid
 
 		# Get the prepared site/document description
 		getPreparedDescription: ->

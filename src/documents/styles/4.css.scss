@@ -1,0 +1,214 @@
+/* ==========================================================================
+   bitches!
+   ========================================================================== */
+
+$palegreen: #8DCCC1;
+
+body{
+  background-color:#fff;
+}
+
+#vids{
+  -webkit-transition:left 500ms ease-out ;
+}
+
+#toggle{
+  width:100%;
+  margin:0;
+  padding:0;
+  background-image:url(../img/simple-nav.jpg);
+  height:59px;
+  border-bottom:10px solid $palegreen;
+
+  li:nth-child(1){
+    margin-left:445px;
+  }
+  li{
+    width:13%;
+    float:left;
+    background-color:#000;
+    text-transform: uppercase;
+    display: inline;
+    text-align: center;
+    transition: all 100ms linear ;
+    -moz-transition:all 100ms linear ;
+    -webkit-transition:all 100ms linear ;
+    -o-transition:all 100ms linear ;
+    &.selected{
+      color:$palegreen;
+
+      a{
+        color:$palegreen;
+      }
+    }
+
+    &:hover{
+      // background-color:#222;
+    }
+
+    a{
+      font-weight: bold;
+      color:#ddd;
+      height:59px;
+      width:100%;
+      background-color:#000;
+      text-decoration: none;
+      transition: all 100ms linear ;
+      -moz-transition:all 100ms linear ;
+      -webkit-transition:all 100ms linear ;
+      -o-transition:all 100ms linear ;
+      text-align: center;
+      line-height: 59px;
+      font-size:14px;
+
+      &:hover{
+        color:$palegreen;
+      }
+    }
+  }
+}
+
+.section{
+  position: absolute;
+  top:0;
+  left:0;
+
+  a{
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 100ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    transition: all 100ms linear ;
+    -moz-transition:all 100ms linear ;
+    -webkit-transition:all 100ms linear ;
+    -o-transition:all 100ms linear ;
+    display: block;
+    float:left;
+    position: relative;
+    &:hover{
+    }
+    img{
+      display: block;
+      float:left;
+    }
+    .headshot{
+      width:330px;
+    }
+  }
+  .hover{
+    color:white;
+    padding-top:90px;
+    line-height:30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:24px;
+    font-family:times;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: all 100ms linear ;
+    -moz-transition:all 100ms linear ;
+    -webkit-transition:all 100ms linear ;
+    -o-transition:all 100ms linear ;
+  }
+}
+
+.section.animate-in{
+  @for $i from 1 through 15 {
+    a:nth-child(#{$i}){
+      -webkit-animation-delay: $i * 30ms;
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn /* Safari and Chrome */
+{
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.section.videos{
+  a img{
+    width:285px;
+  }
+
+  .hover{
+    background-color:$palegreen;
+    width:100%;
+    height:100%;
+  }
+  a:hover{
+    .hover{
+      opacity: 1;
+    }
+  }
+}
+.section.products{
+  display: none;
+  a img{
+    width:237px;
+  }
+
+  a:hover{
+    opacity: 0.6;
+  }
+}
+.section.team{
+  display: none;
+  a img{
+    width:356px;
+  }
+
+  a:hover{
+    opacity: 0.6;
+  }
+}
+
+#topvids{
+  width:100%;
+  height:765px;
+  #vids{
+    width:5000px;
+    top:0;
+    left:0;
+    position: absolute;
+    height:765px
+  }
+  .vid-arrow{
+    position: absolute;
+    top:300px;
+    height:100px;
+    width:40px;
+    left:0;
+    background-color:#333;
+    color:white;
+    font-size:22px;
+    padding-right:5px;
+    font-family: verdana;
+    text-align:center;
+    line-height: 90px;
+    text-decoration: none;
+
+    &:hover{
+      background-color:$palegreen;
+    }
+  }
+
+  .vid-arrow.right{
+    right:0;
+    left:auto;
+  }
+}
+
+#sections-wrapper{
+  position: relative;
+  width:100%;
+  height:1000px;
+}
+
+
+

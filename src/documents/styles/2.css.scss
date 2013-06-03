@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Global Styles bitches!
+   ========================================================================== */
+
+body{
+  background-color:#111;
+}
+
+body > article{
+  margin-top:39px;
+}
+
+#overlay{
+  background-color:#000;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 1;
+  z-index: 99;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+  -webkit-transition: color 50ms linear;
+}
+
+#cover_trailer{
+  max-width:100%;
+  margin:0 auto;
+
+  .video-wrapper{
+  }
+
+  video{
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe,
+  embed,
+  object {
+    max-width: 100%;
+  }
+}
+
+#nav_wrapper{
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 999;
+  height:65px;
+  width:1440px;
+
+  ul{
+    padding:0;
+    margin:0;
+
+    li{
+      display: inline;
+      list-style: none;
+    }
+  }
+
+  .swoosh{
+    padding-left: 80px!important;
+    padding-right: 0px!important;
+  }
+
+  ul#menu{
+    height:65px;
+    width:1440px;
+    background-image:url(../img/nav.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 10;
+    top:0;
+    position: absolute;
+    background-color:#000;
+    width:100%;
+
+    li{
+      line-height: 50px;
+      font-size:13px;
+      font-weight:bold;
+    }
+
+    a{
+      padding:20px;
+      color:white;
+      &:hover{
+        color:#fa5600;
+      }
+    }
+  }
+
+  &.slide-out{
+    overflow: visible;
+
+    #video_nav{
+      top:65px;
+    }
+  }
+
+
+  #video_nav{
+    background-color:rgba(50,50,50,1);
+    border-bottom:2px solid #000;
+    width:100%;
+    position: absolute;
+    z-index: 5;
+    -webkit-transition: all 400ms ease-out ;
+    height:140px;
+    top:-140px;
+    opacity: 1;
+
+    ul{
+      padding:20px;
+    }
+
+    li > a {
+      margin:0 10px;
+      display: block;
+      float:left;
+      background-color:#444;
+      -webkit-transition: opacity 100ms linear;
+      -webkit-animation-name: pulse-fade-in;
+      -webkit-animation-duration: 300ms;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 2s;
+
+      &:hover{
+        opacity: 0.5;
+      }
+
+      &.selected{
+        .video-thmb{
+          border:5px solid #2a2a2a;
+          width:90px;
+          height:90px;
+          display: block;
+        }
+      }
+
+      .video-thmb{
+        width:100px;
+        height:100px;
+        display: block;
+      }
+
+    }
+
+    @for $i from 1 through 7 {
+        li:nth-child(#{$i}) a{
+            -webkit-animation-delay: $i * 50ms;
+            background-image:url(../img/vidthmb#{$i}.jpg);
+            background-size:100% 100%;
+        }
+    }
+  }
+}
+
+.swoosh{
+  background-image:url(../img/nike-logo-white.png);
+  width:100px;
+  background-repeat: no-repeat;
+  height:18px;
+  background-position: center center;
+}
+
+#details_section{
+  width:100%;
+  background-color:#eee;
+  margin-top:0px;
+  z-index: 80;
+  position: relative;
+  font-family: "Times New Roman";
+
+  .longform-section{
+    position: relative;
+    background-color:#eee;
+    float:left;
+    width:100%;
+  }
+
+  .widephotobg{
+    height:812px;
+    position: relative;
+    width:100%;
+    float:left;
+    img{
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    img:nth-child(2){
+      top:10%;
+      left:auto;
+      right:24%;
+    }
+    img:nth-child(3){
+      width:1400px;
+    }
+  }
+
+  p{
+    font-size:18px;
+    font-family: "BodoniStd", "Times New Roman";
+    clear:both;
+    width:570px;
+  }
+
+  h1{
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom:2px solid black;
+    font-size: 60px;
+    line-height: 80px;
+    float: left;
+  }
+
+  .bigger{
+    font-size: 84px;
+    padding-top: 13px;
+    float: left;
+  }
+
+  .copy{
+    width:40%;
+    z-index: 11;
+    padding:5%;
+  }
+
+  .copy.rightcol{
+    right:5%;
+    float:right;
+  }
+
+
+  .learn-more{
+    background-image:url(../img/learnmore.jpg);
+    background-size:107px;
+    height:43px;
+    width:107px;
+    height:43px;
+    display: block;
+    float:left;
+    margin-bottom:50px;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+
+  .animated-col{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    right:0;
+    width:100%;
+    height:100%;
+    img{
+      position: absolute;
+      top:35%;
+      right:5%;
+    }
+    &.locked{
+      position: fixed;
+      img{
+        top:56%;
+      }
+    }
+    &.locked-bottom{
+      img{
+        top:auto;
+        bottom:0%;
+      }
+
+
+      .buy-now{
+        bottom:6%;
+      }
+    }
+
+
+    .buy-now{
+      background-image:url(../img/buynow.jpg);
+      position: absolute;
+      width:215px;
+      height:86px;
+      bottom:12%;
+      left:12%;
+    }
+  }
+
+  .section2{
+    background-color:#E5E6E8;
+    .animated-col{
+      img{
+        left:5%;
+      }
+      &.locked{
+      }
+      &.locked-bottom{
+        img{
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes pulse-fade-in /* Safari and Chrome */
+{
+  0%   {opacity: 0.5;}
+  100% {opacity: 1;}
+}
