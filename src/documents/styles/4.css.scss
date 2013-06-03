@@ -4,7 +4,26 @@
 
 $palegreen: #8DCCC1;
 
+#navbarjpg{
+  height:65px;
+  width:1440px;
+  background-image:url(../img/nav.jpg);
+  position: fixed;
+  z-index: 55;
+  background-size:100%;
+  top:0;
+  left:0;
+
+}
+
+#content{
+  margin-top:53px;
+  position: relative;
+}
+
 body{
+  margin:0;
+  background-color:#000;
   background-color:#fff;
 }
 
@@ -16,15 +35,11 @@ body{
   width:100%;
   margin:0;
   padding:0;
-  background-image:url(../img/simple-nav.jpg);
   height:59px;
   border-bottom:10px solid $palegreen;
 
-  li:nth-child(1){
-    margin-left:445px;
-  }
   li{
-    width:13%;
+    width:33.33%;
     float:left;
     background-color:#000;
     text-transform: uppercase;
@@ -36,14 +51,27 @@ body{
     -o-transition:all 100ms linear ;
     &.selected{
       color:$palegreen;
-
+      background-color:#272727;
       a{
         color:$palegreen;
+      }
+      position: relative;
+      .green-arrow{
+        width:10px;
+        height:10px;
+        background-color:$palegreen;
+        bottom:-5px;
+        position: absolute;
+        left:49%;
+        -webkit-transform:rotate(45deg);
       }
     }
 
     &:hover{
-      // background-color:#222;
+      background-color:#272727;
+      a{
+        color:white;
+      }
     }
 
     a{
@@ -51,7 +79,6 @@ body{
       color:#ddd;
       height:59px;
       width:100%;
-      background-color:#000;
       text-decoration: none;
       transition: all 100ms linear ;
       -moz-transition:all 100ms linear ;
@@ -89,6 +116,7 @@ body{
     float:left;
     position: relative;
     &:hover{
+      opacity: 0.6;
     }
     img{
       display: block;

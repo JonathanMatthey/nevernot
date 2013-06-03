@@ -303,12 +303,37 @@ a{
     background-color:#E5E6E8;
     .animated-col{
       img{
+        top:10%;
         left:5%;
       }
       &.locked{
+        img{
+          top:10%;
+        }
       }
       &.locked-bottom{
         img{
+          top:46%!important;
+        }
+      }
+    }
+  }
+
+  .section1{
+    background-color:#E5E6E8;
+    .animated-col{
+      img{
+        top:26%;
+        width:500px;
+      }
+      &.locked{
+        img{
+          top:38%;
+        }
+      }
+      &.locked-bottom{
+        img{
+          top:56%;
         }
       }
     }

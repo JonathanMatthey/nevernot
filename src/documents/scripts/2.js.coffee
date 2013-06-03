@@ -52,8 +52,8 @@ $(document).ready ->
       @scrollIndex = Math.round($(document).scrollTop() % 146)
       console.log(@scrollIndex)
 
-      $(".section1 .animated-col img:nth-child(" + @scrollIndex + ")").show()
-      $(".section1 .animated-col img:nth-child(" + @scrollIndex + ")").siblings('img').fadeOut(100)
+      $(".section1 .animated-col img:nth-child(" + @scrollIndex + ")").fadeIn(400)
+      $(".section1 .animated-col img:nth-child(" + @scrollIndex + ")").siblings('img').fadeOut(600)
     else if (@scrollTopVal > @copyLeftColBottom)
       $(".section1 .animated-col").removeClass("locked").addClass("locked-bottom")
     else

@@ -10,7 +10,7 @@ $(document).ready ->
   $(document).scroll ->
     @winHeight = $(window).height()
     @scrollTopVal = $(document).scrollTop()
-    @currPage = Math.round(@scrollTopVal / 420) + 1
+    @currPage = Math.round(@scrollTopVal / 220) + 1
     console.log('@currPage',@currPage, '@scrollTopVal',@scrollTopVal)
     switch @currPage
       when 1

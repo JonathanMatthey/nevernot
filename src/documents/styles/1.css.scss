@@ -1,6 +1,21 @@
 /* ==========================================================================
    Global Styles bitches!
    ========================================================================== */
+
+body{
+  margin:0;
+}
+
+#sidenav{
+  background-image:url(../img/snowfall-sidenav.png);
+  width:11px;
+  height:388px;
+  position: fixed;
+  top:30%;
+  right:20px;
+  z-index: 999;
+}
+
 #navbarjpg{
   height:65px;
   width:1440px;
@@ -25,10 +40,12 @@
   background-color: transparent;
   position: relative;
   z-index: 11;
+  float:left;
 }
 
 .article{
   padding:0;
+  float:left;
 
   position: relative;
   z-index: 11;
