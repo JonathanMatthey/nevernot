@@ -28,6 +28,7 @@ body{
 }
 
 #vids{
+  -moz-transition:left 500ms ease-out ;
   -webkit-transition:left 500ms ease-out ;
 }
 
@@ -63,6 +64,7 @@ body{
         bottom:-5px;
         position: absolute;
         left:49%;
+        -moz-transform:rotate(45deg);
         -webkit-transform:rotate(45deg);
       }
     }
@@ -87,6 +89,7 @@ body{
       text-align: center;
       line-height: 59px;
       font-size:14px;
+      font-family: helvetica, sans-serif;
 
       &:hover{
         color:$palegreen;
@@ -108,6 +111,12 @@ body{
     -webkit-animation-direction: forwards;
     -webkit-animation-timing-function: linear;
     -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: fadeIn;
+    -moz-animation-duration: 100ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-direction: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
     transition: all 100ms linear ;
     -moz-transition:all 100ms linear ;
     -webkit-transition:all 100ms linear ;
@@ -148,11 +157,17 @@ body{
 .section.animate-in{
   @for $i from 1 through 15 {
     a:nth-child(#{$i}){
+      -moz-animation-delay: $i * 30ms;
       -webkit-animation-delay: $i * 30ms;
     }
   }
 }
 
+@-moz-keyframes fadeIn /* Safari and Chrome */
+{
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
 @-webkit-keyframes fadeIn /* Safari and Chrome */
 {
   0%   {opacity: 0;}
@@ -161,7 +176,7 @@ body{
 
 .section.videos{
   a img{
-    width:285px;
+    width:284px;
   }
 
   .hover{

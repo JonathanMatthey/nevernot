@@ -13,6 +13,7 @@
 }
 body{
   background-color:#111;
+  margin:0;
 }
 
 #three-cols-container{
@@ -51,12 +52,14 @@ body{
   margin: 0px ;
   opacity: 0.1;
   float:left;
+  -moz-transition: all 400ms ease-out ;
   -webkit-transition: all 400ms ease-out ;
 }
 .headshot{
   width:300px;
   float:left;
   margin:10px auto;
+  -moz-transition: all 400ms ease-out ;
   -webkit-transition: all 400ms ease-out ;
   opacity: 0.1;
 }
@@ -64,6 +67,7 @@ body{
   width:135px;
   float:left;
   margin:10px ;
+  -moz-transition: all 400ms ease-out ;
   -webkit-transition: all 400ms ease-out ;
   opacity: 0.1;
 }

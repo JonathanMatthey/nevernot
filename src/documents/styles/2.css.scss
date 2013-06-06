@@ -4,6 +4,7 @@
 
 body{
   background-color:#111;
+  margin:0;
 }
 
 body > article{
@@ -25,6 +26,7 @@ a{
   color:white;
   text-decoration: none;
   -webkit-transition: color 50ms linear;
+  -moz-transition: color 50ms linear;
 }
 
 #cover_trailer{
@@ -113,6 +115,7 @@ a{
     position: absolute;
     z-index: 5;
     -webkit-transition: all 400ms ease-out ;
+    -moz-transition: all 400ms ease-out ;
     height:140px;
     top:-140px;
     opacity: 1;
@@ -133,6 +136,13 @@ a{
       -webkit-animation-direction: normal;
       -webkit-animation-timing-function: linear;
       -webkit-animation-delay: 2s;
+      -moz-transition: opacity 100ms linear;
+      -moz-animation-name: pulse-fade-in;
+      -moz-animation-duration: 300ms;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-direction: normal;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 2s;
 
       &:hover{
         opacity: 0.5;
@@ -158,6 +168,7 @@ a{
     @for $i from 1 through 7 {
         li:nth-child(#{$i}) a{
             -webkit-animation-delay: $i * 50ms;
+            -moz-animation-delay: $i * 50ms;
             background-image:url(../img/vidthmb#{$i}.jpg);
             background-size:100% 100%;
         }
@@ -323,12 +334,12 @@ a{
     background-color:#E5E6E8;
     .animated-col{
       img{
-        top:26%;
+        top:17.5%;
         width:500px;
       }
       &.locked{
         img{
-          top:38%;
+          top:29%;
         }
       }
       &.locked-bottom{
@@ -340,6 +351,11 @@ a{
   }
 }
 
+@-moz-keyframes pulse-fade-in /* Safari and Chrome */
+{
+  0%   {opacity: 0.5;}
+  100% {opacity: 1;}
+}
 @-webkit-keyframes pulse-fade-in /* Safari and Chrome */
 {
   0%   {opacity: 0.5;}
